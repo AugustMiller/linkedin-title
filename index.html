@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LinkedIn Title Generator</title>
+  </head>
+  <body>
+    <button id="generate">Title me!</button>
+    <p id="title"></p>
+  </body>
+  <script type="text/javascript">
+    const prefixes = ['Post', 'Inter', 'Trans', 'Circum', 'Co', 'Intra', 'Ex', 'Pre', 'Extra', 'Proto', 'Quasi', 'Semi', 'Ante', 'Ad', 'Di', 'Sub', 'Mono', 'Sub', 'Anti', 'Pro', 'Micro', 'Auto', 'Posi', 'Macro', 'Deep', 'Latent', 'Supra', 'Super', 'Cyber', 'Over', 'De', 'Non', 'Omni'];
+
+    const descriptors = ['Liminal', 'Relational', 'Personal', 'Tangential', 'Corporate', 'Conditional', 'Dimensional', 'Spatial', 'Linguistic', 'Intentional', 'Cultural', 'Aesthetic', 'Artisanal', 'Structural', 'Transitional', 'Boundary', 'Manifestation', 'Sensual', 'Emotional', 'Possibility', 'Terrestrial', 'Entrepreneurial', 'Divisional', 'Functional', 'Sectional', 'Sexual', 'Mimetic', 'Synthetic', 'Simulatory', 'Conformational', 'Organizational', 'Psychological', 'Traditional', 'Peripheral'];
+
+    const nouns = ['Alchemist', 'Anthropologist', 'Curator', 'Designer', 'Investigator', 'Explorer', 'Ethnographer', 'Spelunker', 'Director', 'Sculptor', 'Communicator', 'Performer', 'Biologist', 'Dancer', 'Bystander', 'Conservator', 'Spectator', 'Warrior', 'Instigator', 'Author', 'Intendant', 'Ringleader', 'Facilitator', 'Theorist', 'Specialist', 'Acrobat', 'Custodian', 'Architect', 'Topologist', 'Organizer', 'Officer', 'Musicologist', 'Administrator', 'Artisan', 'Purveyer', 'Seeker', 'Visionary', 'Musician', 'Psychologist', 'Outsider', 'Soujourner', 'Daydreamer', 'Drifter', 'Troubadour'];
+
+    const randomFromSet =  (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+    const generateButton = document.getElementById('generate');
+    const readout = document.getElementById('title');
+
+    generateButton.addEventListener('click', () => {
+      readout.innerText = `${randomFromSet(prefixes)}-${randomFromSet(descriptors)} ${randomFromSet(nouns)}`;
+    })
+  </script>
+</html>
